@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ExploreGardenar = () => {
+const ExploreGardener = () => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const ExploreGardenar = () => {
     );
 };
 
-export default ExploreGardenar;
+export default ExploreGardener;
