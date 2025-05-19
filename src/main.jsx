@@ -13,6 +13,10 @@ import NotFound from "./pages/NotFound.jsx";
 import ShareTip from "./pages/ShareTip.jsx";
 import TipDetails from "./pages/TipDetails.jsx";
 import UpdateTip from "./pages/UpdateTip.jsx";
+import Root from "./layout/Root.jsx";
+import AuthProvider from "./context/AuthProvider.jsx";
+import PrivateRoute from "./Routes/PrivateRoutes.jsx";
+import Home from "./pages/Home.jsx";
 
 
 const router = createBrowserRouter([

@@ -1,0 +1,9 @@
+.active {
+    
+    font-weight: bold;
+    color: #1d8ad8; 
+    padding-bottom: 2px;
+    border-bottom: 2px solid #1d4ed8;
+    transition: all 0.3s ease;
+  }
+  
