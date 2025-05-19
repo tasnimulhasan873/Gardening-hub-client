@@ -8,7 +8,6 @@ import App from "./App.jsx";
 import { HelmetProvider } from "react-helmet-async";
 import Login from "./pages/Login.jsx";
 import Register from "./pages/Register.jsx";
-import Footer from "./components/Footer.jsx";
 import NotFound from "./pages/NotFound.jsx";
 import ShareTip from "./pages/ShareTip.jsx";
 import TipDetails from "./pages/TipDetails.jsx";
@@ -17,6 +16,9 @@ import Root from "./layout/Root.jsx";
 import AuthProvider from "./context/AuthProvider.jsx";
 import PrivateRoute from "./Routes/PrivateRoutes.jsx";
 import Home from "./pages/Home.jsx";
+import BrowseTips from "./pages/BrowseTips.jsx";
+import ExploreGardener from "./pages/ExploreGardener.jsx";
+import MyTips from "./pages/MyTips.jsx";
 
 
 const router = createBrowserRouter([
@@ -27,7 +29,8 @@ const router = createBrowserRouter([
       { index: true, element: <Home /> },
       { path: "/login", element: <Login /> },
       { path: "/register", element: <Register /> },
-      { path: "/footer", element: <Footer /> },
+      { path: "/browse_tip", element: <BrowseTips /> },
+      { path: "/explore_gardeners", element: <ExploreGardener /> },
       {
         path: "/shareTip",
         element: (
@@ -37,7 +40,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "tipDetails",
+        path: "/tipDetails",
         element: (
           <PrivateRoute>
             <TipDetails />
@@ -49,6 +52,14 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <UpdateTip />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/my-tips",
+        element: (
+          <PrivateRoute>
+            <MyTips />
           </PrivateRoute>
         ),
       },
