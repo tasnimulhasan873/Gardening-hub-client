@@ -54,7 +54,7 @@ const BrowseTips = () => {
                   <td className="px-4 py-2">{tip.difficulty}</td>
                   <td className="px-4 py-2 text-center">
                     <button
-                      onClick={() => navigate(`/tips/${tip._id}`)}
+                      onClick={() => navigate(`/tipDetails/${tip._id}`)}
                       className="text-green-600 hover:text-green-800"
                       title="See More"
                     >
