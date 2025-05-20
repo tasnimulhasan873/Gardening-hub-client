@@ -32,7 +32,7 @@ const router = createBrowserRouter([
       { path: "/browse_tip", element: <BrowseTips /> },
       { path: "/explore_gardeners", element: <ExploreGardener /> },
       {
-        path: "/shareTip",
+        path: "/gardening-tips",
         element: (
           <PrivateRoute>
             <ShareTip />

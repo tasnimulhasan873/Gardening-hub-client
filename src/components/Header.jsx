@@ -20,7 +20,7 @@ const Header = () => {
       <NavLink to="/browse_tip" className={({ isActive }) => isActive ? "isActive" : ""}>Browse Tip</NavLink>
       {user && (
         <>
-          <NavLink to="/shareTip" className={({ isActive }) => isActive ? "isActive" : ""}>Share a Garden Tip</NavLink>
+          <NavLink to="/gardening-tips" className={({ isActive }) => isActive ? "isActive" : ""}>Share a Garden Tip</NavLink>
           <NavLink to="/tipDetails" className={({ isActive }) => isActive ? "isActive" : ""}>Tip Details</NavLink>
           <NavLink to="/my-tips" className={({ isActive }) => isActive ? "isActive" : ""}>My Tips</NavLink>
           <NavLink to="/updateTip" className={({ isActive }) => isActive ? "isActive" : ""}>Update Tip</NavLink>
