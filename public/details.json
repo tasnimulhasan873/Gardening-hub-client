@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Grow Together",
+    "button": "Get Started",
+    "image": "https://i.ibb.co/WWtb1pK3/istockphoto-1148009613-612x612.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Urban Gardening Made Simple",
+    "button": "Explore Now",
+    "image": "https://i.ibb.co/rKNkSt0m/Tree-Planting4-e1699460099976-1067x600-c-default.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Your Green Journey Starts Here",
+    "button": "Join Us",
+    "image": "https://i.ibb.co/XZZ0vGHH/as-tree-planting-brookline.jpg"
+  }
+]

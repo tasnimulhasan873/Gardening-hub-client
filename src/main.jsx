@@ -19,7 +19,28 @@ import Home from "./pages/Home.jsx";
 import BrowseTips from "./pages/BrowseTips.jsx";
 import ExploreGardener from "./pages/ExploreGardener.jsx";
 import MyTips from "./pages/MyTips.jsx";
+import { redirect } from "react-router-dom";
 
+
+// Loader function for MyTips route
+const myTipsLoader = async () => {
+  // Replace this with your auth logic to get the email:
+  const userEmail = localStorage.getItem("userEmail"); // or get token etc
+
+  if (!userEmail) {
+    // Redirect to login if no user email found
+    return redirect("/login");
+  }
+
+  const res = await fetch(`http://localhost:3000/my-tips?email=${encodeURIComponent(userEmail)}`);
+
+  if (!res.ok) {
+    throw new Response("Failed to load tips", { status: res.status });
+  }
+
+  const data = await res.json();
+  return data;
+};
 
 const router = createBrowserRouter([
   {
@@ -62,6 +83,7 @@ const router = createBrowserRouter([
             <MyTips />
           </PrivateRoute>
         ),
+        loader: myTipsLoader,
       },
 
       { path: "*", element: <NotFound /> },
