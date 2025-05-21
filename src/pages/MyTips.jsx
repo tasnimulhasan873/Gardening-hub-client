@@ -52,56 +52,66 @@ const MyTips = () => {
   };
 
   return (
-    <div className="max-w-6xl mx-auto mt-10 px-4">
-      <h2 className="text-2xl font-bold mb-6 text-green-700">
-        My Gardening Tips ({tips.length})
-      </h2>
+  <div className="max-w-6xl mx-auto mt-10 px-4">
+    <h2 className="text-3xl font-bold mb-6 text-green-700 text-center">
+      My Gardening Tips <span className="text-sm text-gray-600">({tips.length})</span>
+    </h2>
 
-      {tips.length === 0 ? (
-        <p className="text-gray-500">You haven't shared any tips yet.</p>
-      ) : (
-        <div className="overflow-x-auto">
-          <table className="min-w-full bg-white border rounded-lg shadow">
-            <thead className="bg-green-100">
-              <tr>
-                <th className="py-2 px-4 border-b text-left">Title</th>
-                <th className="py-2 px-4 border-b text-left">Status</th>
-                <th className="py-2 px-4 border-b text-left">Date</th>
-                <th className="py-2 px-4 border-b text-left">Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              {tips.map((tip) => (
-                <tr key={tip._id}>
-                  <td className="py-2 px-4 border-b">{tip.title}</td>
-                  <td className="py-2 px-4 border-b capitalize">
+    {tips.length === 0 ? (
+      <p className="text-center text-gray-500 text-lg">You haven't shared any tips yet.</p>
+    ) : (
+      <div className="overflow-x-auto">
+        <table className="min-w-full bg-white border border-gray-200 rounded-xl shadow-lg">
+          <thead className="bg-green-100 text-green-900">
+            <tr>
+              <th className="py-3 px-25 text-left text-sm font-semibold uppercase tracking-wider">Title</th>
+              <th className="py-3 px-9 text-left text-sm font-semibold uppercase tracking-wider">Status</th>
+              <th className="py-3 px-9 text-left text-sm font-semibold uppercase tracking-wider">Date</th>
+              <th className="py-3 px-19 text-left text-sm font-semibold uppercase tracking-wider">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {tips.map((tip, index) => (
+              <tr
+                key={tip._id}
+                className={`${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'} hover:bg-green-50 transition-all`}
+              >
+                <td className="py-3 px-25 border-b">{tip.title}</td>
+                <td className="py-3 px-6 border-b">
+                  <span
+                    className={`inline-block px-3 py-1 text-sm rounded-full font-medium ${
+                      tip.status === 'public' ? 'bg-green-200 text-green-800' : 'bg-yellow-100 text-yellow-800'
+                    }`}
+                  >
                     {tip.status || 'private'}
-                  </td>
-                  <td className="py-2 px-4 border-b">
-                    {new Date(tip.createdAt || Date.now()).toLocaleDateString()}
-                  </td>
-                  <td className="py-2 px-4 border-b space-x-2">
-                    <button
-                      onClick={() => handleUpdate(tip._id)}
-                      className="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600"
-                    >
-                      Update
-                    </button>
-                    <button
-                      onClick={() => handleDelete(tip._id)}
-                      className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600"
-                    >
-                      Delete
-                    </button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      )}
-    </div>
-  );
+                  </span>
+                </td>
+                <td className="py-3 px-6 border-b">
+                  {new Date(tip.createdAt || Date.now()).toLocaleDateString()}
+                </td>
+                <td className="py-3 px-6 border-b flex space-x-2">
+                  <button
+                    onClick={() => handleUpdate(tip._id)}
+                    className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-1.5 rounded-full text-sm font-medium shadow"
+                  >
+                     Update
+                  </button>
+                  <button
+                    onClick={() => handleDelete(tip._id)}
+                    className="bg-red-500 hover:bg-red-600 text-white px-4 py-1.5 rounded-full text-sm font-medium shadow"
+                  >
+                    🗑️ Delete
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    )}
+  </div>
+);
+
 };
 
 export default MyTips;

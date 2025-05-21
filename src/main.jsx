@@ -50,7 +50,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/updateTip",
+        path: "/update-tip/:id",
         element: (
           <PrivateRoute>
             <UpdateTip />

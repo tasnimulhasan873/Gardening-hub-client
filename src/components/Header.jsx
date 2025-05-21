@@ -23,7 +23,7 @@ const Header = () => {
           <NavLink to="/gardening-tips" className={({ isActive }) => isActive ? "isActive" : ""}>Share a Garden Tip</NavLink>
           <NavLink to="/tipDetails" className={({ isActive }) => isActive ? "isActive" : ""}>Tip Details</NavLink>
           <NavLink to="/my-tips" className={({ isActive }) => isActive ? "isActive" : ""}>My Tips</NavLink>
-          <NavLink to="/updateTip" className={({ isActive }) => isActive ? "isActive" : ""}>Update Tip</NavLink>
+          <NavLink to="/update-tip" className={({ isActive }) => isActive ? "isActive" : ""}>Update Tip</NavLink>
         </>
       )}
       <NavLink to="/explore_gardeners" className={({ isActive }) => isActive ? "isActive" : ""}>Explore Gardeners</NavLink>
