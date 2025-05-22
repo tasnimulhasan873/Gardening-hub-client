@@ -1,12 +1,22 @@
-# React + Vite
+# Garden Hub - Gardening Tips Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Live Site:** [https://gardening-hub-client.web.app/]
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- User authentication with Firebase for secure login and personalized experience.
+- Submit detailed gardening tips including title, plant type, difficulty, category, and optional images.
+- Choose tip visibility: Public or Hidden, for flexible sharing options.
+- Responsive and user-friendly form with real-time validation and feedback.
+- Loading spinner and success/error notifications using SweetAlert2 for enhanced UX.
+- Categorized tips by Composting, Plant Care, Vertical Gardening, and more.
+- Users can manage their own tips — update or delete after submission.
 
-## Expanding the ESLint configuration
+## Project Description
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Garden Hub is a community-driven platform for gardening enthusiasts to share, discover, and learn from gardening tips. It empowers users to submit detailed tips on various gardening topics, tailored by plant type and difficulty, helping gardeners of all levels grow their skills. With features like user authentication, tip visibility controls, and a clean responsive design, Garden Hub fosters collaboration and knowledge sharing in a welcoming online environment.
+
+---
+
+
+

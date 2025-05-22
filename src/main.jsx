@@ -61,7 +61,7 @@ const router = createBrowserRouter([
         path: "/my-tips",
        loader: () => {
   const user = JSON.parse(localStorage.getItem("user"));
-  return fetch(`http://localhost:3000/my-tips?email=${user?.email}`);
+  return fetch(`${import.meta.env.VITE_API_BASE_URL}/my-tips?email=${user?.email}`);
 }
 ,
         element: (

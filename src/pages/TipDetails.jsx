@@ -9,7 +9,7 @@ const TipDetails = () => {
 
   useEffect(() => {
 
-    fetch(`http://localhost:3000/browse_tip/${id}`)
+    fetch(`${import.meta.env.VITE_API_BASE_URL}/browse_tip/${id}`)
       .then((res) => res.json())
       .then((data) => setTip(data))
       .catch((err) => console.error("Failed to load tip details:", err));
@@ -17,7 +17,7 @@ const TipDetails = () => {
 
   const handleLike = async () => {
     try {
-      const res = await fetch(`http://localhost:3000/browse_tip/like/${id}`, {
+      const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/browse_tip/like/${id}`, {
         method: "PATCH",
       });
       const data = await res.json();

@@ -9,7 +9,7 @@ const UpdateTip = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`http://localhost:3000/tip/${id}`)
+    fetch(`${import.meta.env.VITE_API_BASE_URL}/tip/${id}`)
       .then((res) => res.json())
       .then((data) => setTipData(data))
       .catch((err) => console.error('Error loading tip:', err));
@@ -24,7 +24,7 @@ const UpdateTip = () => {
 
     const updatedTip = { title, description, status };
 
-    fetch(`http://localhost:3000/tip/${id}`, {
+    fetch(`${import.meta.env.VITE_API_BASE_URL}/tip/${id}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(updatedTip),

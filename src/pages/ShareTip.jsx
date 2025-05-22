@@ -26,7 +26,7 @@ const ShareTip = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch("http://localhost:3000/gardening-tips", {
+      const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/gardening-tips`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -74,6 +74,7 @@ const ShareTip = () => {
           name="title"
           placeholder="Tip Title"
           value={formData.title}
+          required
           onChange={handleChange}
         />
         <input
