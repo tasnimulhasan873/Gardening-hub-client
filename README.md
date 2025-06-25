@@ -63,11 +63,20 @@
   <h2>⚙️ Run Locally</h2>
   <h3>📁 Clone and Setup</h3>
 
-  <h4>Frontend:</h4>
-  <pre><code>git clone https://github.com/tasnimulhasan873/gardening-hub-client.git
+<h4>Frontend:</h4>
+<pre><code>git clone https://github.com/tasnimulhasan873/gardening-hub-client.git
 cd gardening-hub-client
 npm install
 npm run dev
+</code></pre>
+
+<h4>Backend:</h4>
+<pre><code>git clone https://github.com/tasnimulhasan873/gardening-hub-server.git
+cd gardening-hub-server
+npm install
+npm start
+</code></pre>
+
 
 
   <hr />
