@@ -24,13 +24,13 @@
 
   <h2>🔑 Features</h2>
   <ul>
-    <li>🔐 User authentication using Firebase for secure login and personalized experience</li>
-    <li>📝 Add gardening tips with title, plant type, difficulty, category, notes, and optional images</li>
-    <li>👁️ Control visibility of each tip: Public or Hidden</li>
-    <li>🧾 Categorized by Composting, Plant Care, Vertical Gardening, and more</li>
-    <li>⚙️ Real-time form validation with success/error alerts via SweetAlert2</li>
-    <li>📋 Users can update or delete their own submitted tips</li>
-    <li>📱 Responsive UI with a user-friendly design for all devices</li>
+    <li> User authentication using Firebase for secure login and personalized experience</li>
+    <li> Add gardening tips with title, plant type, difficulty, category, notes, and optional images</li>
+    <li> Control visibility of each tip: Public or Hidden</li>
+    <li> Categorized by Composting, Plant Care, Vertical Gardening, and more</li>
+    <li> Real-time form validation with success/error alerts via SweetAlert2</li>
+    <li> Users can update or delete their own submitted tips</li>
+    <li> Responsive UI with a user-friendly design for all devices</li>
   </ul>
 
   <hr />
@@ -64,17 +64,11 @@
   <h3>📁 Clone and Setup</h3>
 
   <h4>Frontend:</h4>
-  <pre><code>git clone https://github.com/your-username/gardening-hub-client.git
+  <pre><code>git clone https://github.com/tasnimulhasan873/gardening-hub-client.git
 cd gardening-hub-client
 npm install
 npm run dev
-</code></pre>
 
-  <h3>🔐 Environment Variables</h3>
-  <pre><code>VITE_API_URL=https://your-backend-api.com
-VITE_FIREBASE_API_KEY=your-firebase-api-key
-VITE_FIREBASE_AUTH_DOMAIN=your-app.firebaseapp.com
-  </code></pre>
 
   <hr />
 
@@ -87,8 +81,7 @@ VITE_FIREBASE_AUTH_DOMAIN=your-app.firebaseapp.com
 
   <hr />
 
-  <h2>🙌 Contribution</h2>
-  <p>Open to collaboration! Feel free to fork, improve features, and submit PRs.</p>
+
 
   <hr />
 
