@@ -18,7 +18,7 @@
 
   <h2>📸 Screenshot</h2>
   <img src="./gh.png" alt="Garden Hub Screenshot" />
-  <!-- Replace ./screenshot.png with actual path or URL -->
+
 
   <hr />
 
